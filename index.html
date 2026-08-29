@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirtan Koshti — Frontend Developer</title>
+<meta name="description" content="Kirtan Koshti — Frontend Developer specializing in pixel-perfect, responsive web experiences with Drupal, WordPress Bricks Builder and modern JavaScript.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🟡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="glow glow--gold"></div>
+<div class="glow glow--amber"></div>
+<div class="glow glow--gold2"></div>
+
+<!-- ===== Navbar ===== -->
+<header class="navbar" id="navbar">
+  <div class="container">
+    <a href="#home" class="logo">Kirtan<span>.dev</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn--ghost">Let's Talk</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="pill reveal"><span class="dot"></span> Available for new projects</div>
+
+      <h1 class="reveal reveal-delay-1">
+        Kirtan Koshti
+        <span class="role grad-text">Frontend Developer</span>
+      </h1>
+
+      <p class="hero-desc reveal reveal-delay-2">
+        I craft <strong>pixel-perfect, responsive</strong> web experiences — from Figma &amp; PSD designs
+        to production-ready HTML/CSS, CMS theming and interactive interfaces. Currently building at
+        <strong>AddWeb Solution</strong>.
+      </p>
+
+      <div class="hero-cta reveal reveal-delay-2">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Let's Talk</a>
+      </div>
+
+      <div class="hero-badges reveal reveal-delay-3">
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">Bootstrap</span>
+        <span class="tech-badge">Drupal</span>
+        <span class="tech-badge">WordPress · Bricks Builder</span>
+      </div>
+
+      <div class="hero-points reveal reveal-delay-3">
+        <div class="point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg> Clean Code</div>
+        <div class="point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="14" rx="2"/><path d="M9 21h6M12 17v4"/></svg> Responsive Design</div>
+        <div class="point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Performance Focused</div>
+        <div class="point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-4 10.5c.7.6 1 1.4 1 2.5h6c0-1.1.3-1.9 1-2.5A6 6 0 0 0 12 2z"/></svg> Creative &amp; Detail-Oriented</div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-glow"></div>
+        <div class="hero-photo">
+          <img src="assets/images/profile-navy.jpg" alt="Kirtan Koshti — Frontend Developer">
+        </div>
+
+        <div class="floating-card floating-card--top">
+          <div class="fc-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+          </div>
+          <div><strong>3+ Years</strong><span>Frontend experience</span></div>
+        </div>
+
+        <div class="floating-card floating-card--bottom">
+          <div class="fc-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <div><strong>30+ Projects</strong><span>Shipped &amp; live</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats strip ===== -->
+<div class="stats-strip reveal">
+  <div class="container">
+    <div class="stat"><h3>30+</h3><p>Projects Shipped</p></div>
+    <div class="stat"><h3>3+</h3><p>Years of Experience</p></div>
+    <div class="stat"><h3>20+</h3><p>Happy Clients</p></div>
+    <div class="stat"><h3>4</h3><p>Companies Worked With</p></div>
+  </div>
+</div>
+
+<!-- ===== Marquee ===== -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>HTML5</span><span class="dim">•</span>
+    <span>CSS3</span><span class="dim">•</span>
+    <span>JavaScript</span><span class="dim">•</span>
+    <span>jQuery</span><span class="dim">•</span>
+    <span>Bootstrap</span><span class="dim">•</span>
+    <span>Drupal</span><span class="dim">•</span>
+    <span>WordPress</span><span class="dim">•</span>
+    <span>Bricks Builder</span><span class="dim">•</span>
+    <span>Twig</span><span class="dim">•</span>
+    <span>Responsive Design</span><span class="dim">•</span>
+    <!-- duplicate for seamless loop -->
+    <span>HTML5</span><span class="dim">•</span>
+    <span>CSS3</span><span class="dim">•</span>
+    <span>JavaScript</span><span class="dim">•</span>
+    <span>jQuery</span><span class="dim">•</span>
+    <span>Bootstrap</span><span class="dim">•</span>
+    <span>Drupal</span><span class="dim">•</span>
+    <span>WordPress</span><span class="dim">•</span>
+    <span>Bricks Builder</span><span class="dim">•</span>
+    <span>Twig</span><span class="dim">•</span>
+    <span>Responsive Design</span><span class="dim">•</span>
+  </div>
+</div>
+
+<!-- ===== About ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-photo reveal">
+      <div class="about-photo-frame">
+        <img src="assets/images/profile-grey.jpg" alt="Kirtan Koshti portrait">
+      </div>
+      <div class="about-exp-badge">
+        <h4>3+</h4>
+        <p>Years Experience</p>
+      </div>
+    </div>
+
+    <div class="about-body reveal reveal-delay-1">
+      <div class="eyebrow">About Me</div>
+      <h2>Turning designs into <span class="text-gold">pixel-perfect</span> web experiences</h2>
+      <p>
+        I'm <strong>Kirtan Koshti</strong>, a Frontend Developer who loves translating Figma and PSD designs
+        into clean, semantic, production-ready code. I specialize in building responsive interfaces and
+        theming for <strong>Drupal</strong> and <strong>WordPress (Bricks Builder)</strong>, alongside
+        modern HTML5, CSS3 and JavaScript development.
+      </p>
+      <p>
+        Currently working as a Frontend Developer at <strong>AddWeb Solution</strong>, where I deliver
+        pixel-perfect, cross-browser interfaces for enterprise clients — with a strong focus on clean code,
+        performance and attention to detail.
+      </p>
+
+      <div class="about-facts">
+        <div class="fact"><span>Location</span><strong>India</strong></div>
+        <div class="fact"><span>Experience</span><strong>3+ Years</strong></div>
+        <div class="fact"><span>Availability</span><strong>Open to freelance</strong></div>
+        <div class="fact"><span>Currently at</span><strong>AddWeb Solution</strong></div>
+      </div>
+
+      <a href="#contact" class="btn btn--primary">Let's Work Together</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Expertise</div>
+      <h2>Technical <span class="text-gold">Skills</span></h2>
+      <p>The tools and technologies I use to design, build and ship interfaces.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="sc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+        </div>
+        <h3>Design to Code</h3>
+        <div class="skill-row"><div class="sr-top"><b>Figma to HTML5</b><span>95%</span></div><div class="skill-bar"><i data-width="95"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>PSD to HTML5</b><span>92%</span></div><div class="skill-bar"><i data-width="92"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>HTML5</b><span>96%</span></div><div class="skill-bar"><i data-width="96"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>CSS3</b><span>94%</span></div><div class="skill-bar"><i data-width="94"></i></div></div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="sc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+        </div>
+        <h3>JavaScript &amp; Libraries</h3>
+        <div class="skill-row"><div class="sr-top"><b>JavaScript</b><span>88%</span></div><div class="skill-bar"><i data-width="88"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>jQuery</b><span>90%</span></div><div class="skill-bar"><i data-width="90"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Bootstrap</b><span>93%</span></div><div class="skill-bar"><i data-width="93"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Responsive Design</b><span>95%</span></div><div class="skill-bar"><i data-width="95"></i></div></div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="sc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>CMS — Drupal</h3>
+        <div class="skill-row"><div class="sr-top"><b>Drupal Frontend</b><span>90%</span></div><div class="skill-bar"><i data-width="90"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Drupal Theming</b><span>88%</span></div><div class="skill-bar"><i data-width="88"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Twig Templates</b><span>85%</span></div><div class="skill-bar"><i data-width="85"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Component Libraries</b><span>84%</span></div><div class="skill-bar"><i data-width="84"></i></div></div>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="sc-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 4 6 4 9s-1.5 6.4-4 9c-2.5-2.6-4-6-4-9s1.5-6.4 4-9z"/></svg>
+        </div>
+        <h3>CMS — WordPress</h3>
+        <div class="skill-row"><div class="sr-top"><b>WordPress Bricks Builder</b><span>92%</span></div><div class="skill-bar"><i data-width="92"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Custom Theme Development</b><span>87%</span></div><div class="skill-bar"><i data-width="87"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>WP Page Builders</b><span>89%</span></div><div class="skill-bar"><i data-width="89"></i></div></div>
+        <div class="skill-row"><div class="sr-top"><b>Plugin Integration</b><span>82%</span></div><div class="skill-bar"><i data-width="82"></i></div></div>
+      </div>
+    </div>
+
+    <div class="tag-cloud reveal">
+      <span>Figma</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>JavaScript</span>
+      <span>jQuery</span><span>PSD to HTML</span><span>Drupal</span><span>WordPress</span><span>Bricks Builder</span>
+      <span>Sass/SCSS</span><span>Git</span><span>VS Code</span><span>Responsive Design</span><span>Cross-browser</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Work</div>
+      <h2>Selected <span class="text-gold">Projects</span></h2>
+      <p>A few projects that reflect how I build — clean, responsive and detail-focused.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">
+          <span class="project-tag">Drupal</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>Corporate Website Theme</h3>
+          <p>Pixel-perfect Drupal theme built from Figma designs — custom Twig templates, reusable components and full responsive layout.</p>
+          <div class="project-stack"><span>Drupal</span><span>Twig</span><span>SCSS</span><span>JS</span></div>
+          <div class="project-links">
+            <a href="#">Live Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-thumb">
+          <span class="project-tag">WordPress</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5v8l-9 5-9-5V8l9-5z"/><path d="M12 12l9-5M12 12v9M12 12L3 8"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>SaaS Landing Page</h3>
+          <p>High-converting marketing site built with WordPress Bricks Builder — custom sections, animations and mobile-first layout.</p>
+          <div class="project-stack"><span>WordPress</span><span>Bricks Builder</span><span>CSS3</span></div>
+          <div class="project-links">
+            <a href="#">Live Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-thumb">
+          <span class="project-tag">Frontend</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 9l-4 3 4 3M18 9l4 3-4 3M14 4l-4 16"/></svg>
+        </div>
+        <div class="project-body">
+          <h3>E-commerce Storefront</h3>
+          <p>Responsive storefront UI with dynamic product grids, cart interactions and cross-browser tested components.</p>
+          <div class="project-stack"><span>HTML5</span><span>JavaScript</span><span>Bootstrap</span></div>
+          <div class="project-links">
+            <a href="#">Live Demo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="projects-note">Sample project cards — swap in your real project names, links and screenshots.</p>
+  </div>
+</section>
+
+<!-- ===== Experience ===== -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="justify-content:center">Career</div>
+      <h2>Work <span class="text-gold">Experience</span></h2>
+      <p>My journey as a frontend developer so far.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item current reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-badge">Current</span>
+            <span class="timeline-date">2023 — Present</span>
+          </div>
+          <h3>Frontend Developer</h3>
+          <div class="company">AddWeb Solution</div>
+          <p>Working on Drupal frontend theming and WordPress Bricks Builder development. Delivering pixel-perfect, responsive interfaces from Figma and PSD designs for enterprise clients.</p>
+          <div class="timeline-tags"><span>Drupal</span><span>WordPress</span><span>Bricks Builder</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-badge">Freelance</span>
+          </div>
+          <h3>Freelance Frontend Developer</h3>
+          <div class="company">Self-employed</div>
+          <p>Worked independently on client projects — building responsive websites, converting Figma/PSD designs to HTML, and delivering custom WordPress solutions.</p>
+          <div class="timeline-tags"><span>Figma to HTML</span><span>WordPress</span><span>CSS3</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-date">2023</span>
+          </div>
+          <h3>Frontend Developer</h3>
+          <div class="company">Karma Source</div>
+          <p>Developed and maintained frontend codebases, focused on translating designs into clean, semantic HTML/CSS with JavaScript interactions.</p>
+          <div class="timeline-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-meta">
+            <span class="timeline-badge">Internship</span>
+          </div>
+          <h3>Frontend Developer Intern</h3>
+          <div class="company">Agile Infoways</div>
+          <p>Kickstarted my professional career building responsive web pages, learning industry best practices, and working with a team on real client projects.</p>
+          <div class="timeline-tags"><span>HTML5</span><span>Bootstrap</span><span>jQuery</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-info reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's Build <span class="text-gold">Together</span></h2>
+      <p>Whether you need a pixel-perfect landing page, a Drupal theme, a WordPress Bricks site, or a long-term frontend partner — I'd love to hear from you.</p>
+
+      <div class="info-card">
+        <div class="ic-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+        </div>
+        <div><span>Email</span><strong id="displayEmail">kirtankoshti24@gmail.com</strong></div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div><span>Location</span><strong>India · Remote-friendly</strong></div>
+      </div>
+
+      <div class="info-card">
+        <div class="ic-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        </div>
+        <div><span>Response Time</span><strong>Usually within 24 hours</strong></div>
+      </div>
+
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.8v2.05h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5 3.3 9.3 7.9 10.8.6.1.8-.3.8-.6v-2.1c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.2 21.3 23.5 17 23.5 12c0-6.3-5.2-11.5-11.5-11.5z"/></svg></a>
+        <a href="#" aria-label="Behance"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 7h9v2H0V7zm22.5 5.7c0-3-2-5.2-5.2-5.2-3.4 0-5.6 2.5-5.6 6 0 3.6 2.3 5.9 5.8 5.9 2.6 0 4.5-1.2 5.3-3.4h-2.7c-.3.7-1.3 1.2-2.5 1.2-1.7 0-2.8-1-2.9-2.7h7.7c0-.6.1-1.2.1-1.8zM15 11.5c.2-1.4 1.1-2.3 2.4-2.3 1.4 0 2.2 1 2.3 2.3H15zM6.6 12.4c1.1-.5 1.7-1.4 1.7-2.7 0-2.3-1.7-3.3-3.9-3.3H0v12.2h4.6c2.5 0 4.4-1.1 4.4-3.6 0-1.5-.8-2.4-2.4-2.6zM2.7 8.3h1.6c1 0 1.8.3 1.8 1.3 0 .9-.7 1.3-1.7 1.3H2.7V8.3zm1.9 8.3H2.7v-3h2c1.2 0 2 .5 2 1.5 0 1.1-.9 1.5-2.1 1.5z"/></svg></a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap reveal reveal-delay-1">
+      <div id="formStatus" class="form-status">
+        <svg id="formStatusIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"></svg>
+        <span id="formStatusText"></span>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="field" id="field-name">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name">
+            <div class="field-err"></div>
+          </div>
+          <div class="field" id="field-email">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email">
+            <div class="field-err"></div>
+          </div>
+        </div>
+
+        <div class="field" id="field-subject">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration, etc.">
+          <div class="field-err"></div>
+        </div>
+
+        <div class="field" id="field-message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+          <div class="field-err"></div>
+        </div>
+
+        <!-- honeypot anti-spam field, left empty by real users -->
+        <div class="field hp-field">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block" id="submitBtn">
+          <span class="spinner"></span>
+          <span class="btn-label">Send Message</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <a href="#home" class="logo">Kirtan<span>.dev</span></a>
+    <p>&copy; <span id="year"></span> Kirtan Koshti. All rights reserved.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
