@@ -116,6 +116,113 @@ try {
 
     $mail->send();
 
+    // Best-effort auto-reply to the sender. Failure here must not fail the
+    // request — the notification above already reached the recipient.
+    try {
+        $thanksBody = <<<HTML
+<!DOCTYPE html>
+<html lang="en">
+<body style="margin:0; padding:0; background-color:#f2f2f5; font-family: Arial, Helvetica, sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f2f2f5; padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px; width:100%; background-color:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 10px 30px rgba(20,20,30,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#0d0d14; padding:28px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="font-size:20px; font-weight:800; color:#f5b942; letter-spacing:0.2px;">
+                    Kirtan<span style="color:#ffffff; font-weight:400;">.dev</span>
+                  </td>
+                  <td align="right" style="font-size:12px; color:#a6a6b3;">Frontend Developer</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Accent bar -->
+          <tr>
+            <td style="height:4px; line-height:4px; font-size:0; background-color:#f5b942; background-image:linear-gradient(90deg,#f5b942,#ff9d3d);">&nbsp;</td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding:36px 32px 8px 32px;">
+              <div style="display:inline-block; width:44px; height:44px; line-height:44px; text-align:center; border-radius:50%; background-color:#fdf2df; color:#c8890f; font-size:22px; font-weight:700; margin-bottom:16px;">&#10003;</div>
+              <h1 style="margin:0 0 12px 0; font-size:22px; color:#16161f;">Thanks for reaching out, {$safeName}!</h1>
+              <p style="margin:0 0 20px 0; font-size:15px; line-height:1.6; color:#4a4a55;">
+                I've received your message and will get back to you as soon as possible &mdash; usually within
+                <strong style="color:#16161f;">1&ndash;2 business days</strong>.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Message recap card -->
+          <tr>
+            <td style="padding:0 32px 28px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f8f8fa; border:1px solid #ececf1; border-radius:10px;">
+                <tr>
+                  <td style="padding:18px 20px;">
+                    <p style="margin:0 0 4px 0; font-size:11px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; color:#a6a6b3;">Subject</p>
+                    <p style="margin:0 0 16px 0; font-size:14px; color:#16161f; font-weight:600;">{$safeSubject}</p>
+                    <p style="margin:0 0 4px 0; font-size:11px; font-weight:700; letter-spacing:0.6px; text-transform:uppercase; color:#a6a6b3;">Your message</p>
+                    <p style="margin:0; font-size:14px; line-height:1.6; color:#4a4a55;">{$safeMessage}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Sign-off -->
+          <tr>
+            <td style="padding:0 32px 32px 32px; border-top:1px solid #ececf1;">
+              <p style="margin:24px 0 0 0; font-size:14px; line-height:1.6; color:#4a4a55;">
+                Talk soon,<br>
+                <strong style="color:#16161f;">Kirtan Koshti</strong>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#f8f8fa; padding:18px 32px; text-align:center;">
+              <p style="margin:0; font-size:12px; color:#9d9da8;">This is an automated confirmation &mdash; no need to reply to this email.</p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+HTML;
+
+        $thanksMail = new PHPMailer(true);
+        $thanksMail->isSMTP();
+        $thanksMail->Host       = SMTP_HOST;
+        $thanksMail->Port       = SMTP_PORT;
+        $thanksMail->SMTPAuth   = true;
+        $thanksMail->Username   = SMTP_USERNAME;
+        $thanksMail->Password   = str_replace(' ', '', SMTP_PASSWORD);
+        $thanksMail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $thanksMail->CharSet    = 'UTF-8';
+
+        $thanksMail->setFrom(FROM_EMAIL, FROM_NAME);
+        $thanksMail->addAddress($email, $name);
+
+        $thanksMail->isHTML(true);
+        $thanksMail->Subject = 'Thanks for contacting ' . SITE_NAME;
+        $thanksMail->Body    = $thanksBody;
+        $thanksMail->AltBody = "Thanks for reaching out, {$name}!\n\nI've received your message and will get back to you as soon as possible, usually within 1-2 business days.\n\nYour message:\nSubject: {$subject}\n\n{$message}";
+
+        $thanksMail->send();
+    } catch (PHPMailerException $e) {
+        error_log('Contact form auto-reply error: ' . $thanksMail->ErrorInfo);
+    }
+
     respond(true, 'Message sent successfully! I will get back to you soon.');
 } catch (PHPMailerException $e) {
     error_log('Contact form mail error: ' . $mail->ErrorInfo);
